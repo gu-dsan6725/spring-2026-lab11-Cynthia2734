@@ -1,0 +1,512 @@
+2026-04-21 21:23:42,994,p29243,{simple_agents_test.py:382},INFO,Debug logging enabled
+2026-04-21 21:23:42,995,p29243,{simple_agents_test.py:138},DEBUG,[PING] Agent: travel_assistant, URL: http://127.0.0.1:10001/ping
+2026-04-21 21:23:42,998,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10001
+2026-04-21 21:23:42,999,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10001 "GET /ping HTTP/1.1" 200 20
+2026-04-21 21:23:42,999,p29243,{simple_agents_test.py:148},DEBUG,[PING RESPONSE] Time: 0.005s, Healthy: True
+2026-04-21 21:23:42,999,p29243,{simple_agents_test.py:69},DEBUG,[REQUEST] Agent: travel_assistant, Endpoint: http://127.0.0.1:10001
+2026-04-21 21:23:42,999,p29243,{simple_agents_test.py:70},DEBUG,[REQUEST] Payload:
+{
+  "jsonrpc": "2.0",
+  "id": "test-59a5873c",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Search for flights from SF to NY on 2025-11-15"
+        }
+      ],
+      "messageId": "test-msg-f2bdbc4b"
+    }
+  }
+}
+2026-04-21 21:23:43,000,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10001
+2026-04-21 21:23:46,583,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10001 "POST / HTTP/1.1" 200 3552
+2026-04-21 21:23:46,584,p29243,{simple_agents_test.py:84},DEBUG,[RESPONSE] Time: 3.584s, Status: 200
+2026-04-21 21:23:46,584,p29243,{simple_agents_test.py:88},DEBUG,[RESPONSE] Body:
+{
+  "id": "test-59a5873c",
+  "jsonrpc": "2.0",
+  "result": {
+    "artifacts": [
+      {
+        "artifactId": "e581e28d-4640-49be-8f27-155d3e0f692d",
+        "name": "agent_response",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I already have the search results for flights from SF to NY on November 15, 2025. Here they are again:\n\n1. **Delta DL303**\n   - Departure: 2:30 PM \u2192 Arrival: 11:00 PM\n   - Duration: 5h 30m\n   - Price: $220.00\n   - Available seats: 120\n   - Aircraft: B757\n\n2. **United UA101**\n   - Departure: 8:00 AM \u2192 Arrival: 4:30 PM\n   - Duration: 5h 30m\n   - Price: $250.00\n   - Available seats: 85\n   - Aircraft: B737\n\n3. **American AA202**\n   - Departure: 10:15 AM \u2192 Arrival: 6:45 PM\n   - Duration: 5h 30m\n   - Price: $280.00\n   - Available seats: 45\n   - Aircraft: A320\n\nWould you like to check pricing details for any specific flight, or do you need help with anything else?\n"
+          }
+        ]
+      }
+    ],
+    "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+    "history": [
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "test-msg-f2bdbc4b",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Search for flights from SF to NY on 2025-11-15"
+          }
+        ],
+        "role": "user",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "fca73c29-843e-4c03-a26a-1eeca9df1ed8",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I already"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "e9ed0c09-b585-4d1f-b4f6-5752b8cf0fb3",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " have the search results for flights from SF to NY on November 15, 2025. Here they are again:\n\n1. **Delta DL303**"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "b83b3650-e971-4d06-a36a-772a237ac137",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "\n   - Departure: 2:30 PM \u2192 Arrival: 11:00 PM\n   - Duration: 5h 30m\n   - Price: $220.00\n   - Available seats: 120\n   - Aircraft: B757\n\n2. **United UA101**"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "88747c77-681a-4356-ac3a-b0d4f94d5720",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "\n   - Departure: 8:00 AM \u2192 Arrival: 4:30 PM\n   - Duration: 5h 30m\n   - Price: $250.00\n   - Available seats: 85\n   - Aircraft: B737\n\n3. **American AA202"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "82bdfeb8-3b66-4dbb-91f9-eaae1a620786",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "**\n   - Departure: 10:15 AM \u2192 Arrival: 6:45 PM\n   - Duration: 5h 30m\n   - Price: $280.00\n   - Available seats: 45\n   - Aircraft: A320\n\nWould"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "a85bda25-81d7-4ba6-83aa-78a6b7554748",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " you like to check pricing details for any specific flight, or do you need help"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      },
+      {
+        "contextId": "7963a2a1-d50f-4fdf-b5bb-18e978de5826",
+        "kind": "message",
+        "messageId": "39dfa785-4818-4cde-a212-90ad56dfa5cf",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " with anything else?"
+          }
+        ],
+        "role": "agent",
+        "taskId": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de"
+      }
+    ],
+    "id": "d7c252e4-d5f7-48b4-97e4-8c33d8fd01de",
+    "kind": "task",
+    "status": {
+      "state": "completed",
+      "timestamp": "2026-04-22T01:23:46.581547+00:00"
+    }
+  }
+}
+2026-04-21 21:23:46,584,p29243,{simple_agents_test.py:107},DEBUG,[API REQUEST] Agent: travel_assistant, URL: http://127.0.0.1:10001/api/search-flights
+2026-04-21 21:23:46,584,p29243,{simple_agents_test.py:108},DEBUG,[API REQUEST] Method: POST, Params: {'departure_city': 'SF', 'arrival_city': 'NY', 'departure_date': '2025-11-15'}
+2026-04-21 21:23:46,585,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10001
+2026-04-21 21:23:46,587,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10001 "POST /api/search-flights?departure_city=SF&arrival_city=NY&departure_date=2025-11-15 HTTP/1.1" 200 1360
+2026-04-21 21:23:46,587,p29243,{simple_agents_test.py:120},DEBUG,[API RESPONSE] Time: 0.003s, Status: 200
+2026-04-21 21:23:46,587,p29243,{simple_agents_test.py:124},DEBUG,[API RESPONSE] Body:
+{
+  "result": "{\n  \"query\": {\n    \"departure_city\": \"SF\",\n    \"arrival_city\": \"NY\",\n    \"departure_date\": \"2025-11-15\"\n  },\n  \"flights\": [\n    {\n      \"id\": 3,\n      \"flight_number\": \"DL303\",\n      \"airline\": \"Delta\",\n      \"departure_city\": \"SF\",\n      \"arrival_city\": \"NY\",\n      \"departure_time\": \"2025-11-15 14:30\",\n      \"arrival_time\": \"2025-11-15 23:00\",\n      \"duration_minutes\": 330,\n      \"price\": 220.0,\n      \"available_seats\": 120,\n      \"aircraft_type\": \"B757\"\n    },\n    {\n      \"id\": 1,\n      \"flight_number\": \"UA101\",\n      \"airline\": \"United\",\n      \"departure_city\": \"SF\",\n      \"arrival_city\": \"NY\",\n      \"departure_time\": \"2025-11-15 08:00\",\n      \"arrival_time\": \"2025-11-15 16:30\",\n      \"duration_minutes\": 330,\n      \"price\": 250.0,\n      \"available_seats\": 85,\n      \"aircraft_type\": \"B737\"\n    },\n    {\n      \"id\": 2,\n      \"flight_number\": \"AA202\",\n      \"airline\": \"American\",\n      \"departure_city\": \"SF\",\n      \"arrival_city\": \"NY\",\n      \"departure_time\": \"2025-11-15 10:15\",\n      \"arrival_time\": \"2025-11-15 18:45\",\n      \"duration_minutes\": 330,\n      \"price\": 280.0,\n      \"available_seats\": 45,\n      \"aircraft_type\": \"A320\"\n    }\n  ],\n  \"count\": 3\n}"
+}
+2026-04-21 21:23:46,587,p29243,{simple_agents_test.py:107},DEBUG,[API REQUEST] Agent: travel_assistant, URL: http://127.0.0.1:10001/api/recommendations
+2026-04-21 21:23:46,587,p29243,{simple_agents_test.py:108},DEBUG,[API REQUEST] Method: GET, Params: {'max_price': 300, 'preferred_airlines': 'United,Delta'}
+2026-04-21 21:23:46,587,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10001
+2026-04-21 21:23:46,589,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10001 "GET /api/recommendations?max_price=300&preferred_airlines=United%2CDelta HTTP/1.1" 200 1760
+2026-04-21 21:23:46,589,p29243,{simple_agents_test.py:120},DEBUG,[API RESPONSE] Time: 0.003s, Status: 200
+2026-04-21 21:23:46,590,p29243,{simple_agents_test.py:124},DEBUG,[API RESPONSE] Body:
+{
+  "result": "{\n  \"criteria\": {\n    \"max_price\": 300.0,\n    \"preferred_airlines\": [\n      \"United\",\n      \"Delta\"\n    ]\n  },\n  \"recommendations\": [\n    {\n      \"id\": 4,\n      \"flight_number\": \"UA104\",\n      \"airline\": \"United\",\n      \"route\": \"SF -> LA\",\n      \"departure_time\": \"2025-11-16 07:00\",\n      \"arrival_time\": \"2025-11-16 08:30\",\n      \"duration_minutes\": 90,\n      \"price\": 120.0,\n      \"available_seats\": 95,\n      \"aircraft_type\": \"B737\",\n      \"recommendation_score\": 60\n    },\n    {\n      \"id\": 3,\n      \"flight_number\": \"DL303\",\n      \"airline\": \"Delta\",\n      \"route\": \"SF -> NY\",\n      \"departure_time\": \"2025-11-15 14:30\",\n      \"arrival_time\": \"2025-11-15 23:00\",\n      \"duration_minutes\": 330,\n      \"price\": 220.0,\n      \"available_seats\": 120,\n      \"aircraft_type\": \"B757\",\n      \"recommendation_score\": 26\n    },\n    {\n      \"id\": 6,\n      \"flight_number\": \"DL306\",\n      \"airline\": \"Delta\",\n      \"route\": \"LA -> NY\",\n      \"departure_time\": \"2025-11-18 11:00\",\n      \"arrival_time\": \"2025-11-18 19:30\",\n      \"duration_minutes\": 330,\n      \"price\": 240.0,\n      \"available_seats\": 92,\n      \"aircraft_type\": \"B757\",\n      \"recommendation_score\": 20\n    },\n    {\n      \"id\": 1,\n      \"flight_number\": \"UA101\",\n      \"airline\": \"United\",\n      \"route\": \"SF -> NY\",\n      \"departure_time\": \"2025-11-15 08:00\",\n      \"arrival_time\": \"2025-11-15 16:30\",\n      \"duration_minutes\": 330,\n      \"price\": 250.0,\n      \"available_seats\": 85,\n      \"aircraft_type\": \"B737\",\n      \"recommendation_score\": 16\n    }\n  ],\n  \"count\": 4\n}"
+}
+2026-04-21 21:23:46,590,p29243,{simple_agents_test.py:138},DEBUG,[PING] Agent: flight_booking, URL: http://127.0.0.1:10002/ping
+2026-04-21 21:23:46,590,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10002
+2026-04-21 21:23:46,591,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10002 "GET /ping HTTP/1.1" 200 20
+2026-04-21 21:23:46,592,p29243,{simple_agents_test.py:148},DEBUG,[PING RESPONSE] Time: 0.002s, Healthy: True
+2026-04-21 21:23:46,592,p29243,{simple_agents_test.py:69},DEBUG,[REQUEST] Agent: flight_booking, Endpoint: http://127.0.0.1:10002
+2026-04-21 21:23:46,592,p29243,{simple_agents_test.py:70},DEBUG,[REQUEST] Payload:
+{
+  "jsonrpc": "2.0",
+  "id": "test-23df593e",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Check availability for flight ID 1"
+        }
+      ],
+      "messageId": "test-msg-4cdef027"
+    }
+  }
+}
+2026-04-21 21:23:46,592,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10002
+2026-04-21 21:23:51,115,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10002 "POST / HTTP/1.1" 200 2688
+2026-04-21 21:23:51,115,p29243,{simple_agents_test.py:84},DEBUG,[RESPONSE] Time: 4.523s, Status: 200
+2026-04-21 21:23:51,115,p29243,{simple_agents_test.py:88},DEBUG,[RESPONSE] Body:
+{
+  "id": "test-23df593e",
+  "jsonrpc": "2.0",
+  "result": {
+    "artifacts": [
+      {
+        "artifactId": "c8e9ff82-a71b-4246-a5f8-2da34ffa0635",
+        "name": "agent_response",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "The current availability for flight ID 1 is:\n\n**Flight Details:**\n- **Flight Number:** UA101\n- **Airline:** United\n- **Route:** San Francisco \u2192 New York\n- **Departure Time:** November 15, 2025 at 8:00 AM\n- **Available Seats:** 84 (reduced from 85 due to Jane Smith's reservation)\n- **Price per Seat:** $250.00\n- **Status:** Available\n\nThe available seats have decreased by 1 since the previous reservation for Jane Smith was made. The flight still has plenty of availability.\n"
+          }
+        ]
+      }
+    ],
+    "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+    "history": [
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "test-msg-4cdef027",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Check availability for flight ID 1"
+          }
+        ],
+        "role": "user",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      },
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "7c94c1a8-d06c-40b6-9181-b57f366c18c0",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "The current"
+          }
+        ],
+        "role": "agent",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      },
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "f8e8e896-7c3c-4316-96b3-b4c688537e2c",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " availability for flight ID 1 is:\n\n**Flight Details:**\n- **Flight Number:** UA101\n- **Airline:** United\n- **Route:** San Francisco \u2192 New York\n- **Departure Time:** November 15, 2025 at 8:00 AM\n- **"
+          }
+        ],
+        "role": "agent",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      },
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "05f6c0f8-f19a-496f-b384-022a528dbb50",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Available Seats:** 84 (reduced from 85 due to Jane Smith's reservation)\n- **Price per Seat:** $250.00\n- **Status:** Available\n\nThe"
+          }
+        ],
+        "role": "agent",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      },
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "f02ebece-b721-47df-bde9-2801c5573897",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " available seats have decreased by 1 since the previous reservation for"
+          }
+        ],
+        "role": "agent",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      },
+      {
+        "contextId": "9fb68079-5b8e-4c26-bbd5-1c1966bbd47b",
+        "kind": "message",
+        "messageId": "a8bb3638-d4c7-4daa-8f05-c325a0dfb4f5",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " Jane Smith was made. The flight still has plenty of availability."
+          }
+        ],
+        "role": "agent",
+        "taskId": "41796ca1-4885-40b9-96df-aac0c8d547ca"
+      }
+    ],
+    "id": "41796ca1-4885-40b9-96df-aac0c8d547ca",
+    "kind": "task",
+    "status": {
+      "state": "completed",
+      "timestamp": "2026-04-22T01:23:51.111581+00:00"
+    }
+  }
+}
+2026-04-21 21:23:51,116,p29243,{simple_agents_test.py:69},DEBUG,[REQUEST] Agent: flight_booking, Endpoint: http://127.0.0.1:10002
+2026-04-21 21:23:51,116,p29243,{simple_agents_test.py:70},DEBUG,[REQUEST] Payload:
+{
+  "jsonrpc": "2.0",
+  "id": "test-e48cad8e",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Book flight ID 1 for Jane Smith, email jane@test.com"
+        }
+      ],
+      "messageId": "test-msg-bed14142"
+    }
+  }
+}
+2026-04-21 21:23:51,117,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10002
+2026-04-21 21:23:56,291,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10002 "POST / HTTP/1.1" 200 3844
+2026-04-21 21:23:56,291,p29243,{simple_agents_test.py:84},DEBUG,[RESPONSE] Time: 5.175s, Status: 200
+2026-04-21 21:23:56,291,p29243,{simple_agents_test.py:88},DEBUG,[RESPONSE] Body:
+{
+  "id": "test-e48cad8e",
+  "jsonrpc": "2.0",
+  "result": {
+    "artifacts": [
+      {
+        "artifactId": "9094464d-1ab3-44d7-8a19-9694b1666404",
+        "name": "agent_response",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Another reservation has been successfully created for Jane Smith.\n\n**Reservation Details:**\n- **Booking Number:** BK30E25E\n- **Flight ID:** 1 (UA101, SF \u2192 NY, Nov 15, 2025 at 8:00 AM)\n- **Passenger:** Jane Smith (jane@test.com)\n- **Assigned Seat:** AUTO1\n- **Total Price:** $250.00\n- **Status:** Reserved\n- **Reservation Expires:** 24 hours from creation\n\n**Next Steps:**\n1. Process payment\n2. Confirm booking\n\n**Note:** This is a second reservation for Jane Smith on the same flight. You now have two separate bookings:\n- First booking: **BKE980F2**\n- Second booking: **BK30E25E**\n\nWould you like to proceed with payment and confirmation, or would you prefer to cancel one of these duplicate reservations?\n"
+          }
+        ]
+      }
+    ],
+    "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+    "history": [
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "test-msg-bed14142",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Book flight ID 1 for Jane Smith, email jane@test.com"
+          }
+        ],
+        "role": "user",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "ac37e30d-a296-4f65-bdfc-547f13bd431b",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Another"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "7ce4ffb8-5464-4ba7-8db8-d6942c44f248",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " reservation has been successfully created for Jane Smith.\n\n**Reservation Details:**\n- **Booking Number:** BK30E25E\n- **Flight ID:** 1 (UA101, SF \u2192 NY, Nov 15, 2025 at 8:"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "e873ca10-fd95-47ed-be5d-c453d1562a24",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "00 AM)\n- **Passenger:** Jane Smith (jane@test.com)\n- **Assigned Seat:** AUTO1\n- **Total Price:** $250.00\n- **Status:** Reserved\n- **Reservation Expires:** 24 hours from creation\n\n**Next Steps:**"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "f1bb718e-07be-437f-a2a9-b2c6668afbca",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "\n1. Process payment\n2. Confirm booking\n\n**Note:** This is a second"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "ee023230-6010-4fe8-a792-a7f1ebbbfedf",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " reservation for Jane Smith on the same flight. You now have two separate book"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "c2c1f1b8-6939-4fce-b561-053756c34eae",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "ings:\n- First booking: **BKE980F2**\n- Second booking: **BK30E25E**\n\nWould you"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "7866f398-a3ed-422a-81ae-d4e1a9c1efe2",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " like to proceed with payment and confirmation, or would you prefer to cancel one of these duplicate"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      },
+      {
+        "contextId": "96360f7e-d53b-457b-8183-4419b7cbf664",
+        "kind": "message",
+        "messageId": "80b2e375-322f-493f-afd6-75d4d25bb8dd",
+        "parts": [
+          {
+            "kind": "text",
+            "text": " reservations?"
+          }
+        ],
+        "role": "agent",
+        "taskId": "6406000e-0957-4ccb-8a5b-38b8dea82664"
+      }
+    ],
+    "id": "6406000e-0957-4ccb-8a5b-38b8dea82664",
+    "kind": "task",
+    "status": {
+      "state": "completed",
+      "timestamp": "2026-04-22T01:23:56.290045+00:00"
+    }
+  }
+}
+2026-04-21 21:23:56,291,p29243,{simple_agents_test.py:107},DEBUG,[API REQUEST] Agent: flight_booking, URL: http://127.0.0.1:10002/api/check-availability
+2026-04-21 21:23:56,291,p29243,{simple_agents_test.py:108},DEBUG,[API REQUEST] Method: POST, Params: {'flight_id': 1}
+2026-04-21 21:23:56,292,p29243,{connectionpool.py:241},DEBUG,Starting new HTTP connection (1): 127.0.0.1:10002
+2026-04-21 21:23:56,293,p29243,{connectionpool.py:544},DEBUG,http://127.0.0.1:10002 "POST /api/check-availability?flight_id=1 HTTP/1.1" 200 272
+2026-04-21 21:23:56,293,p29243,{simple_agents_test.py:120},DEBUG,[API RESPONSE] Time: 0.002s, Status: 200
+2026-04-21 21:23:56,293,p29243,{simple_agents_test.py:124},DEBUG,[API RESPONSE] Body:
+{
+  "result": "{\n  \"flight_id\": 1,\n  \"flight_number\": \"UA101\",\n  \"airline\": \"United\",\n  \"route\": \"SF -> NY\",\n  \"departure_time\": \"2025-11-15 08:00\",\n  \"available_seats\": 83,\n  \"price_per_seat\": 250.0,\n  \"availability_status\": \"Available\"\n}"
+}
+Running tests against local endpoints...
+==================================================
+
+Testing Travel Assistant Agent
+------------------------------
+Testing Travel Assistant ping...
+[PASS] Travel Assistant is healthy
+Testing Travel Assistant flight search...
+[PASS] Travel Assistant flight search working
+Testing Travel Assistant API endpoint...
+[PASS] Travel Assistant API endpoint working
+Testing Travel Assistant recommendations...
+[PASS] Travel Assistant recommendations working
+
+Testing Flight Booking Agent
+------------------------------
+Testing Flight Booking ping...
+[PASS] Flight Booking is healthy
+Testing Flight Booking availability check...
+[PASS] Flight Booking availability check working
+Testing Flight Booking reservation...
+[PASS] Flight Booking reservation working
+Testing Flight Booking API endpoint...
+[PASS] Flight Booking API endpoint working
+
+==================================================
+All tests passed!
